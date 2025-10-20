@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-bg {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .card-shadow {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .basketball-bg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M50 0c27.6 0 50 22.4 50 50s-22.4 50-50 50S0 77.6 0 50 22.4 0 50 0zm0 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40S72.1 10 50 10z' fill='%23FF6B35' fill-opacity='0.1'/%3E%3Cpath d='M50 10c-22.1 0-40 17.9-40 40s17.9 40 40 40 40-17.9 40-40S72.1 10 50 10zm0 5c-19.3 0-35 15.7-35 35s15.7 35 35 35 35-15.7 35-35S69.3 15 50 15z' fill='%238842A6' fill-opacity='0.08'/%3E%3C/svg%3E");
+    background-size: 200px 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: blur(2px);
+  }
+  
+  .purple-blur {
+    background: radial-gradient(circle, rgba(139, 69, 166, 0.3) 0%, rgba(139, 69, 166, 0.1) 50%, transparent 70%);
+    filter: blur(40px);
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .typing-animation {
+    overflow: hidden;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    animation: typing 2.5s steps(30, end), blink-caret 0.75s step-end infinite;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  
+  @keyframes typing {
+    0% { width: 0; }
+    70% { width: 100%; }
+    100% { width: 100%; }
+  }
+  
+  @keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: white; }
+  }
+  
+  .skill-card-gradient {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .skill-card-gradient-secondary {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .skill-card-gradient-third {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+  }
+  
+  .skill-card-gradient-fourth {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+  }
+  
+  .skill-card-gradient-fifth {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+  }
+  
+  .skill-card-gradient-sixth {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+  }
+  
+  .skill-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .skill-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.25);
+  }
+  
+  .stagger-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: staggerFadeIn 0.8s ease-out forwards;
+  }
+  
+  @keyframes staggerFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .logo-black {
+    filter: brightness(0) saturate(100%);
+  }
+}
